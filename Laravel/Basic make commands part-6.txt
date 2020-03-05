@@ -1,0 +1,9 @@
+	How to create controller
+
+1. php artisan make:controller NameController
+	         OR
+    php artisan make:controller NameController -r //Default scaffolding
+
+	How to make model
+
+2. php aritsan make:model ModelName -m

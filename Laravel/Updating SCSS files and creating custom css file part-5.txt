@@ -1,0 +1,15 @@
+	how to save edited scss files
+
+1. npm run dev //for a time being
+   
+2. npm run watch  //for cont change update
+
+	How to create custome scss file
+
+1. In resource/assset/scss/ folder create _custome.scss 
+
+2. Write something there like this
+ body{ background: red !important}
+
+3. Then import this file in app.scss file like 
+	import "custom";

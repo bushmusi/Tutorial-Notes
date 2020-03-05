@@ -1,0 +1,22 @@
+	BEGINNER LVL
+1. To initialize a git repository in the root of the folder, run the "git init" command
+
+2.  you can use the "git status" command to see which files git knows exist
+
+3. To add commit to file. you can use the "git add <filename>" command
+
+4. After you added to staging u have to commit it.  "git commit -m "Your message about the commit" "
+
+5. git checkout -b <my branch name>. This command will automatically create a new branch and then 'check you out' on it, meaning git will move you to that branch, off of the master branch
+
+6.  You can use the "git branch" command to confirm that your branch was created.
+
+7.  "git push -u origin master" Pushing file to the branch master file
+
+8.  "git push -u origin <new branch name> : pushing file to new brach file
+
+9. A pull request (or PR) is a way to alert a repo's owners that you want to make some changes to their code
+
+10. "git pull origin master" Get changes on GitHub back to your computer
+
+11. Now we can use the git log command again to see all new commits.

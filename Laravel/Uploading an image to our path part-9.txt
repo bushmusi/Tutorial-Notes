@@ -1,0 +1,40 @@
+	Uploading image
+
+1.  In your view file form method add this one
+	enctype="multipart/form-data"
+
+2. In order to  validate data use below code
+	$this->validate($request,[
+	  'title' => 'required',
+	  'body' => 'required',
+	  'image' => 'image|nullable|max:1999' //up to 2mb size name
+	]);
+
+3. Then link storage folder to public
+	<php artisan storage:link>
+
+4. Get the file information from below code
+
+        if($request->hasFile('cover_image')){
+            //get filename with the exetension
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            //get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //GET just ext
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            //file name to store
+            $filenameToStore = $filename.'_'.time().'.'.$extension;
+            //upload image
+            $path = $request->file('cover_image')->storeAs('public/cover_images',$filenameToStore);
+        }
+        else{
+            $filenameToStore = 'noimage.jpg';
+        }
+
+        //create post
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->image = $filenameToStore;
+        $post->save();
+        return redirect('post/create')->with('success',"Successfully uploaded");

@@ -1,0 +1,22 @@
+	How to create new project using VS code
+
+NB: you have to install flatter plugin to do it
+
+
+1. press "ctrl+shift+p" 
+
+2. Type ">flatter:new project
+
+3. Enter the name of project title
+
+4. Choose your path
+
+5. Enter
+
+//
+ 
+1. Check your path and type <flatter create appname>
+
+2. Then type <flatter run>
+
+3.

@@ -1,0 +1,18 @@
+		Basic knowldge
+
+1. A RESTful API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data.
+
+	How to create Restfull api in github
+1. Initalize the project "git init"
+
+2. Add the file in current folder "git add ."
+
+3. Add commit with suitable message " git commit -m 'Added REST Api'"
+
+4. Add remote origin where the project to be placed "git remote add origin https://github.com:larahelp/RestApi.git"
+
+NB: To check your path <git remote -v>
+
+5. Push your data to github to master branch  "git push -u -f origin master"
+
+6. To change the url <git remote set-url origin git@github.com:USERNAME/REPOSITORY.git>

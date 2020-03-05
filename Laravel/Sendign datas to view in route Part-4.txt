@@ -1,0 +1,28 @@
+ 	It's same if you send it through controller or route
+
+1. define your variable 
+	$data = "hello world"
+	             or
+	$arrayData = array(
+	   'title' => "services",
+	   dept=> ['web design','prog','seo']
+	);
+
+2. Send data to view using \
+	return view('tutorial.variable',compact('data'));
+  		          or
+	return view('tutorial.vairable)->with('data',$data);
+		          or
+	return veiw('tutorial.variable)->with($arrayData);
+
+3. In your view file get the variable through this 
+	"{{ $data}}"
+	         or
+	<h1>{{ $title }}</h1>
+	@if(count($arrayData) > 0)
+                	   @foreach arrayData as $list)
+                    	<ol>dept of {{$list}}</ol>
+                     @endforeach
+                 @endif
+
+4. In order to list the routes <php artisan route:list>

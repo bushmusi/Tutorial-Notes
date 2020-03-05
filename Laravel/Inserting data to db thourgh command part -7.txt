@@ -1,0 +1,13 @@
+	How to insert data through command
+
+1. php artisan tinker //open tinker pad
+
+2. App\post::count() // return how many datas are there
+
+3. $data = new App\Post()
+
+4. $data->title = "your title here"
+
+5. $data->save(); //You saved the data
+
+6. $data::count() //return how many datas are there

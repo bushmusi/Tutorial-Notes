@@ -1,0 +1,5 @@
+1. If class statrts with _(underscore ) it mean it is private class
+
+2. Scaffold helping us lay out our main screen including adding bottom navigation bars, sliding drawers, and tab bar
+
+3.

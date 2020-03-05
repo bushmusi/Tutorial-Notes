@@ -1,0 +1,7 @@
+       	How to generate auth
+
+1. Laravel UI Composer package is a new first-party package that extracts the UI portion of a Laravel project  "composer require laravel/ui --dev"
+
+2. Generate auth command for bootstrap content "php artisan ui bootstrap --auth"
+
+3. Generate migration command to create project " php artisan migrate"

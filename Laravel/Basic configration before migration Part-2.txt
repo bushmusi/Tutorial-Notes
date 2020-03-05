@@ -1,0 +1,49 @@
+       	Basic configration b4 migration
+
+1. Create database in server "your-db"
+
+2. Check your Database server SQL port number "3308"
+
+3. Configure .env file 
+
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3308
+  DB_DATABASE=<Your-db>
+  DB_USERNAME=root
+  DB_PASSWORD=
+
+4. Route to config/database.php and configure
+	
+         'mysql' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3308'),
+            'database' => env('DB_DATABASE', your-db')
+            'username' => env('DB_USERNAME', 'root'),
+            'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
+5. Then edit your "AppServiceProvider.php "
+
+	use Illuminate\Support\Facades\Schema;
+
+	public function boot()
+	{
+   	     Schema::defaultStringLength(191);
+	}
+
+6. Then Run "php artisan migrate"
+
+7. If you want to save changes from model <php artisan migrate:refresh

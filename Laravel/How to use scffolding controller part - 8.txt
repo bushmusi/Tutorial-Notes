@@ -1,0 +1,5 @@
+	How to use scaffolding controller
+
+1. In route/web.php file write <route::resource('post','PostController')>
+
+2. Then write in terminal <php artisan route:list> will list method,url,name and action of each route
