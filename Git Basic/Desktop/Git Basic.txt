@@ -1,0 +1,4 @@
+		Basic tips
+
+1. When you write <git add . > it will not empty file folders.
+2. When you want to add missing file <git add * -f>
